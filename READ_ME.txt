@@ -1,0 +1,3 @@
+Easy、Mwedium、Hard三个文件夹分别代表leetcode上容易，中等和困难的题目。题目都是以SolutionXX题为类，例如第100题，类名为public class Solution100
+ListNode里面存放的是一个leetcode上跟链表相关的类的定义，并覆写了tostring()方法，方便输出打印。可复制进自己的工程中，方便在本地IDE上调试
+TreeNode 同理
