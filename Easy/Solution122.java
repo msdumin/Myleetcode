@@ -8,6 +8,7 @@
 */
 package EasyCode_02;
 
+import java.security.Principal;
 
 /**
 * @ClassName: Solution122——买卖股票的最佳时间
@@ -57,8 +58,28 @@ public class Solution122 {
         return res;
     }*/
 	
+	public static int maxProfit(int[] prices){
+		
+		if(prices.length == 0 || prices.length == 1)
+			return 0;
+		
+		int totalProfit = 0;
+		int onceProfit = 0;
+		int buyIn = prices[0];
+		for(int i = 1 ; i < prices.length ; i ++ ){
+			if(prices[i] > buyIn){
+				onceProfit = prices[i] - buyIn;
+				totalProfit += onceProfit;
+				onceProfit = 0;
+				buyIn = prices[i];
+			}else{
+				buyIn = prices[i];
+			}	
+		}
+		return totalProfit;
+	}
     public static void main(String[] args) {
-		int[] prices = {2,1,4};
+		int[] prices = {7,1,5,3,6,4};
 		System.out.println(maxProfit(prices));
 	}
 }

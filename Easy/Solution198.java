@@ -60,7 +60,6 @@ public class Solution198 {
     	return record[0];
     }
     
-    
     public static void main(String[] args) {
 		int[] nums = {1,2,3,1};
 		System.out.println(new Solution198().rob1(nums));
